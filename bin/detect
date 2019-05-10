@@ -1,0 +1,9 @@
+#!/bin/sh
+# bin/detect <build-dir>
+
+if [ -d $1/public ]; then
+  echo "Download Fingerprints Buildpack"
+  exit 0
+else
+  exit 1
+fi

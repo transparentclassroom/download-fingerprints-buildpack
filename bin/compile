@@ -1,0 +1,12 @@
+#!/bin/sh
+# bin/compile <build-dir> <cache-dir>
+
+# fail fast
+set -e
+
+# debug
+set -x
+
+cd $1
+curl https://s3.amazonaws.com/assets.transparentclassroom.com/webpack/fingerprints.json -o public/webpack/fingerprints.json
+
