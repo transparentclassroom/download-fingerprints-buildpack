@@ -10,4 +10,6 @@ set -x
 cd $1
 mkdir -p public/webpack
 curl https://s3.amazonaws.com/assets.transparentclassroom.com/webpack/fingerprints.json -o public/webpack/fingerprints.json
-
+curl https://s3.amazonaws.com/assets.transparentclassroom.com/locales/locales.tar.gz -o locales.tar.gz
+tar xvfz locales.tar.gz config/locales
+rm locales.tar.gz
